@@ -12,37 +12,117 @@
             align-items: center;
             width: 100vw;
             height: 100vh;
+            background-color:darkblue;
         }
         .conteiner{
             display: flex;
-            background-color:darkorchid;
+            background-color:cornflowerblue;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             width: 100vh;
             height: 20vw;
+            border-radius: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            /* sombreado em volta do conteiner */
+            box-shadow: 0 0 20px rgb(136, 203, 247);
 
         }
 
-
+        .botoes{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            justify-content: center;
+            width: 400px;
+            height: 30px;
+            background-color:azure;
+            font-size: 20px;
+            font-family: Georgia;
+            background-color: cornflowerblue;
+        }
+        
     </style>
 </head>
 <body>
     <div class="conteiner">
+        
+        <h2>🧙‍♂️</h2>
 
-        <h1>🧙‍♂️ O Mago da Adivinhação</h1>
+        <h1>✨ O Mago da Adivinhação ✨</h1>
 
         <p class="sub">Clique no botão abaixo para começar a mágica</p>
 
-        <!-- onclick: atributo (evento), mago: função do script -->
-        <button onclick="mago()">Iniciar</button>
+        <div class="botoes">
+            <!-- onclick: atributo (evento), mago: função do script -->
+            <button onclick="mago()">Iniciar</button>
+            <button onclick="magodnovo()">Jogar novamente</button>
+            <button onclick="magoexplica()">Eplicação da Mágica</button>
+        </div>
 
     </div>
+    
 
     <script>
         // Funçao que será chamada no evento de clique do botão (famoso def do html) mas function no javascript
 
         function mago() {
+            alert ('Olá! Sou o Mago do calculo. Pegue sua calculadora e vamos começar a mágica!!');   
+            let valor = Number(prompt('Qual valor você deseja que apareça no final da conta? '));
+            let apelido = prompt('Me diga um apelido pelo qual posso te chamar:');
+            let fator = Number(prompt('Escolha um fator (2, 3 ou 4):'));
+            // dobra o valor que ele quer que apereça no final
+            let soma = valor * fator;
+
+            alert ('Antes de começarmos, vai uma orientação! A cada calculo que você fizer na calculadora aperte no igual (=) para obter o resultado das contas.');
+
+            alert ('Agora sim, vamos começar!');
+
+            alert ('Passo 1: Digite qualquer número na calculadora');
+            alert ('Passo 2: Multiplque esse número por ' + fator);
+            alert ('Passo 3: Some o resultado com ' + soma);
+            alert ('Passo 4: Divide por ' + fator);
+            alert ('Passo 5: E por fim, subtraia pelo primeiro número que digitou na calculadora');
+
+            alert ('Abracadabra, ' + apelido + '! O resultado é: ' + valor + '.')
+            alert ('Caso o resultado tenha sido diferente de ' + valor + ' tente novamente! Mas sou muito bom, afinal sou um Mago, nunca erro!');
+                    
+        };
+
+        function magodnovo() {
+            alert ('Seja bem vindo novamente! Pegue sua calculadora e vamos começar a mágica!!');   
+            let valor = Number(prompt('Qual valor você deseja que apareça no final da conta? '));
+            let apelido = prompt('Me diga um apelido pelo qual posso te chamar:');
+            let fator = Number(prompt('Escolha um fator (2, 3 ou 4):'));
+            // dobra o valor que ele quer que apereça no final
+            let soma = valor * fator;
+
+            alert ('Antes de começarmos, vai uma orientação! A cada calculo que você fizer na calculadora aperte no igual (=) para obter o resultado das contas.');
+
+            alert ('Agora sim, vamos começar!');
+
+            alert ('Passo 1: Digite qualquer número na calculadora');
+            alert ('Passo 2: Multiplque esse número por ' + fator);
+            alert ('Passo 3: Some o resultado com ' + soma);
+            alert ('Passo 4: Divide por ' + fator);
+            alert ('Passo 5: E por fim, subtraia pelo primeiro número que digitou na calculadora');
+
+            alert ('Abracadabra, ' + apelido + '! O resultado é: ' + valor + '.')
+            alert ('Caso o resultado tenha sido diferente de ' + valor + ' tente novamente! Mas sou muito bom, afinal sou um Mago, nunca erro!');
+                    
+        };
+
+        function magoexplica() {
+            alert ('Ficou curioso para entender a minha mágina. Vamos, vou te explicar.');
+
+            alert ('Passo 1: Pergunte para a pessoa que você irá realizar a mágica qual número ela quer de resultado ao final do calculo. Esse número você multiplicará por 2 (ou o fator desejado 2, 3 ou 4) e guardará em seu mente e diga para a pessoa somente quando for prciso soma.');
+            alert ('Passo 2: Agora você deve pedir para a pessoa digitar qualquer número na calculadora');
+            alert ('Passo 3: Peça que multiplique o resultado por 2 (ou o fator desejado)');
+            alert ('Passo 4: O resultado somar pelo resultado da multiplicação que você guardou na mente (obs: Não pode contar para a pessoa que esse número pelo qual você pediu para somar é a multiplicação do número que ela escolheu como resultado)');
+            alert ('Passo 5: Peça que divida o resultado por 2 (ou fator desejado)');
+            alert ('Passo 6: E por fim, peça para que subtraia pelo primeiro número que digitou na calculado');
+            alert ('E pronta o segredo da minha mágina foi revelado á você, espero que tenha entendido e que tenha conseguido realiza-la.');
 
         };
     </script>
